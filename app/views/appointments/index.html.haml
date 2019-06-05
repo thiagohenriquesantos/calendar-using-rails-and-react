@@ -2,12 +2,7 @@
 
 %h2 Appointments
 
-%h3 Make a new appointment
+#appointments_data{data: @appointments.to_json}
 
-= form_for @appointment, remote: true do |f|
-   = f.text_field :title
-   = f.text_field :appt_time
-   = f.submit 'Make appointment'
-
-#appointments
-   = render 'appointments'
+= javascript_pack_tag 'appointments'
+= stylesheet_pack_tag 'appointments'
